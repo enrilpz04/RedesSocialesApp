@@ -16,6 +16,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import com.example.redessocialesapp.screens.login.LoginScreen
 import com.example.redessocialesapp.ui.theme.AppTheme
 import com.example.redessocialesapp.ui.theme.Orientation
 import com.example.redessocialesapp.ui.theme.RedesSocialesAppTheme
@@ -27,149 +28,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             val window = rememberWindowSizeClass()
             RedesSocialesAppTheme(window) {
-                if(AppTheme.orientation == Orientation.Portrait){
-                    Column(
-                        modifier = Modifier
-                            .fillMaxSize(),
-                        verticalArrangement = Arrangement.SpaceBetween,
-                        horizontalAlignment = Alignment.CenterHorizontally
-                    ){
-                        Box(
-                            modifier = Modifier
-                                .fillMaxWidth(),
-                            contentAlignment = Alignment.Center
-                        ){
-                            Image(
-                                painterResource(id = R.drawable.ic_launcher_background),
-                                contentDescription = "img1",
-                                modifier = Modifier
-                                    .clip(
-                                        RoundedCornerShape(
-                                            bottomEnd = AppTheme.dimens.medium,
-                                            bottomStart = AppTheme.dimens.medium
-                                        )
-                                    )
-                                    .fillMaxWidth(),
-                                contentScale = ContentScale.FillWidth
-                            )
-                            Text(
-                                "Welcome",
-                                style = MaterialTheme.typography.h4,
-                                color = Color.White
-                            )
-                        }
-                        Column(
-                            modifier = Modifier
-                                .fillMaxWidth(),
-                            horizontalAlignment = Alignment.CenterHorizontally,
-                            verticalArrangement = Arrangement.spacedBy(AppTheme.dimens.large)
-                        ){
-                            Text(
-                                "This Application supports all screen sizes and landscape mode",
-                                style = MaterialTheme.typography.h6,
-                                textAlign = TextAlign.Center
-                            )
-                            Text(
-                                "You can have the maximum flexibility regarding your UI using this approach",
-                                style = MaterialTheme.typography.body1,
-                                textAlign = TextAlign.Center
-                            )
-                        }
-                        Button(
-                            onClick = {
-
-                            },
-                            colors = ButtonDefaults.buttonColors(
-                                backgroundColor = Color.Blue,
-                                contentColor = Color.White
-                            ),
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(AppTheme.dimens.mediumLarge),
-                            shape = CircleShape
-                        ) {
-                            Text(
-                                text = "Lets go",
-                                style = MaterialTheme.typography.body1,
-                                fontWeight = FontWeight.Bold,
-                                textAlign = TextAlign.Center,
-                                modifier = Modifier
-                                    .padding(AppTheme.dimens.medium)
-                            )
-                        }
-                    }
-                }else{
-                    Row(
-                        modifier = Modifier
-                            .fillMaxSize(),
-                        verticalAlignment = Alignment.CenterVertically
-                    ){
-                        Box(
-                            modifier = Modifier
-                                .fillMaxSize()
-                                .weight(1f),
-                            contentAlignment = Alignment.Center
-                        ){
-                            Image(
-                                painterResource(id = R.drawable.ic_launcher_background),
-                                contentDescription = "img2",
-                                modifier = Modifier
-                                    .clip(RoundedCornerShape(
-                                        topEnd = AppTheme.dimens.medium,
-                                        bottomEnd = AppTheme.dimens.medium
-                                    ))
-                                    .fillMaxHeight(),
-                                contentScale = ContentScale.FillHeight
-                            )
-                            Text(
-                                "Welcome",
-                                style = MaterialTheme.typography.h4,
-                                color = Color.White
-                            )
-                        }
-                        Column(
-                            modifier = Modifier
-                                .fillMaxSize()
-                                .weight(2f)
-                                .padding(AppTheme.dimens.mediumLarge),
-                            horizontalAlignment = Alignment.CenterHorizontally,
-                            verticalArrangement = Arrangement.SpaceBetween
-                        ){
-                            Text(
-                                "This Application supports all screen sizes and landscape mode",
-                                style = MaterialTheme.typography.h6,
-                                textAlign = TextAlign.Center
-                            )
-                            Text(
-                                "You can have the maximum flexibility regarding your UI using this approach",
-                                style = MaterialTheme.typography.body1,
-                                textAlign = TextAlign.Center
-                            )
-                            Button(
-                                onClick = {
-
-                                },
-                                colors = ButtonDefaults.buttonColors(
-                                    backgroundColor = Color.Blue,
-                                    contentColor = Color.White
-                                ),
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .padding(AppTheme.dimens.mediumLarge),
-                                shape = CircleShape
-                            ) {
-                                Text(
-                                    text = "Lets go",
-                                    style = MaterialTheme.typography.body1,
-                                    fontWeight = FontWeight.Bold,
-                                    textAlign = TextAlign.Center,
-                                    modifier = Modifier
-                                        .padding(AppTheme.dimens.medium)
-                                )
-                            }
-                        }
-                    }
-                }
+                LoginScreen()
             }
         }
     }
