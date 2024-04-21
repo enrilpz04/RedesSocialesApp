@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "916115195283",
+    "project_id": "redessocialesapp-9975b",
+    "storage_bucket": "redessocialesapp-9975b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:916115195283:android:cd5177cc0f286162905466",
+        "android_client_info": {
+          "package_name": "com.example.redessocialesapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaXlb_psd_7gnZm3vcHo5wNrJZElq9ylo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
