@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">RedesSocialesApp</string>
+    <string name="iniciar_sesion">Iniciar sesión</string>
+    <string name="default_web_client_id">916115195283-h8cf2e7uo13giirsc4cfvhh870iq2df9.apps.googleusercontent.com</string>
 </resources>
